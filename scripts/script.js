@@ -1,11 +1,7 @@
 var isHidden = true;
-var position = {
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0
-}
+var order;
 
+// Mobile menu puller 
 $(".menu-dropdown").click(function () {
     if (isHidden) {
         $(".nav").css("top", "0");
@@ -18,31 +14,28 @@ $(".menu-dropdown").click(function () {
     }
 })
 
+
+// Brand product showing
 $(".logo-item").hover(function () {
-
-    var order = this.getAttribute("class");
+    order = this.getAttribute("class");
     order = order.charAt(13);
-
-    position.left = $(".pi-"+order).css("left");
-    position.right = $(".pi-"+order).css("right");
-    position.top = $(".pi-"+order).css("top");
-    position.bottom = $(".pi-"+order).css("bottom");
-
-    $(".pi-"+order).css("left", "0");
-    $(".pi-"+order).css("right", "0");
-    $(".pi-"+order).css("top", "0");
-    $(".pi-"+order).css("bottom", "0");
+    $(".pi-" + order).addClass("position-0");
 
 }, function () {
-    var order = this.getAttribute("class");
+    order = this.getAttribute("class");
     order = order.charAt(13);
-    $(".pi-"+order).css("left", position.left);
-    $(".pi-"+order).css("right", position.right);
-    $(".pi-"+order).css("top", position.top);
-    $(".pi-"+order).css("bottom", position.bottom);
-
+    $(".pi-" + order).removeClass("position-0");
+   
 })
 
 
-// const elem = $("pi-1");
-// $("pi-1").css("position", "static");
+
+// CURSOR
+var cursor = document.querySelector(".cursor");
+
+window.addEventListener("mousemove", function(e){
+
+   cursor.style.top = e.pageY + "px";
+   cursor.style.left = e.pageX + "px";
+
+})

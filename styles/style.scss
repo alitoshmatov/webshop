@@ -6,12 +6,30 @@
 // IMPORTANT! Need adjustments to font: font weight is not working properly letter spacing isnt working at all
 
 $pr-color: #FF521C;
+*{
+    
+    cursor: none;
+}
 
 body {
     font-family: Bahnschrift;
     width: 100%;
     background-color: black;
     color: white;
+    
+}
+
+// Cursor
+.cursor{
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid black;
+    background-color: $pr-color;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -47,7 +65,7 @@ body {
         background-size: 100% 100vh;
         background-position: center;
 
-        // animation-name: bg-main-anim;
+        animation-name: bg-main-anim;
         animation-duration: 10s;
         animation-delay: 1s;
         animation-timing-function: ease-in-out;
@@ -374,13 +392,18 @@ body {
             }
         }
 
+        
+
         .product-item {
             img {
                 width: 100%;
             }
-
-            transition-duration: 1s;
             transition: all;
+            transition-property: top bottom right left;
+
+            transition-duration: 0.7s;
+            
+            position: relative;
         }
 
         .li-1 {
@@ -410,39 +433,49 @@ body {
 
         .pi-1 {
             grid-area: p1;
-            position: relative;
-            left: -100%;
         }
 
         .pi-2 {
             grid-area: p2;
-            position: relative;
-            top: -100%;
         }
 
         .pi-3 {
             grid-area: p3;
-            position: relative;
-            top: -100%;
         }
 
         .pi-4 {
             grid-area: p4;
-            position: relative;
-            right: -100%;
-        }
+       }
 
         .pi-5 {
             grid-area: p5;
-            position: relative;
-            left: -100%;
         }
 
         .pi-6 {
             grid-area: p6;
-            position: relative;
+        }
+
+        // Position 
+        .right{
+            right: -100%;
+        }
+        .left{
             left: -100%;
         }
+        .top{
+            top: -100%;
+        }
+        .bottom{
+            bottom: -100%;
+        }
+
+        .position-0{
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
 
     }
 
