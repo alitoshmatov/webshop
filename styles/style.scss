@@ -1,6 +1,6 @@
 @font-face {
     font-family: Bahnschrift;
-    src: url(/assets/fonts/BAHNSCHRIFT.TTF);
+    src: url("assets/fonts/BAHNSCHRIFT.TTF");
 }
 
 // IMPORTANT! Need adjustments to font: font weight is not working properly letter spacing isnt working at all
@@ -60,7 +60,7 @@ body {
     .main-page {
         width: 100%;
         height: 100vh;
-        background-image: url('/assets/bg-main.png');
+        background-image: url('assets/bg-main.png');
         background-repeat: no-repeat;
         background-size: 100% 100vh;
         background-position: center;
@@ -84,7 +84,7 @@ body {
                 font-size: 0.7rem;
                 padding: 25px 40px;
                 font-weight: bold;
-                background-image: url(/assets/orange-bg.png);
+                background-image: url("assets/orange-bg.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: -200px;
@@ -110,7 +110,7 @@ body {
                 background-color: black;
                 padding: 25px 30px;
     
-                background-image: url(/assets/orange-bg.png);
+                background-image: url(assets/orange-bg.png);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: -200px;
